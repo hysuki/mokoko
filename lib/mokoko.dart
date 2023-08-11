@@ -21,7 +21,7 @@ class Mokoko {
     });
 
     if (response.statusCode == 200) {
-      if (response.body.isEmpty || response.body == '[]') {
+      if (response.body == 'null') {
         return null;
       }
       final json = jsonDecode(response.body) as List; // Parse string as JSON
